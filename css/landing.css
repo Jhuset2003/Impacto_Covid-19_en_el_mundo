@@ -1,4 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
 #logo{
     color:#1d109e;
-    margin-left: 3.125rem;
+}
+body{
+    background-color: #230036;
+    font-family: 'Poppins', sans-serif;
+}
+footer,.footer{
+    background-color: #25214F;
+}
+.navbar-brand{
+    font-size:25px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+}
+.navbar-brand img{
+    width: 30px;
+    margin-right: 4px;
+}
+
+.me-auto{
+    margin: 0 !important;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 50px;
+    
+}
+.navbar-light .navbar-nav .nav-link{
+    color:#1d109e;
+}
+.btn{
+    background-color:#1d109e;
+    width: 150px;
+    border-radius: 20px;
+    height:45px;
+    margin-right: 60px;
+}
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+main .main-header{
+    background-image: url(../images/image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 70vh;
+    margin-bottom: 100px;
+    padding-top:50px;
+}
+.letters-main-header  {
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: center;
+    width: 40%;
+    text-align: left;
+    flex-wrap: wrap;
+}
+.letters-main-header h1{
+    font-weight: bold;
+    font-size:60px
+}
+.letters-main-header p{
+    font-size: 20px;
+}
+.letters-main-header button{
+    background-color: #121058;
+    border: 1px solid #0800ff;;
+    width: 250px;
+    height: 7vh;
+    border-radius: 60px;
+}
+.img-main-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-right: 60px;
+}
+.log-bar {
+    background-color: aliceblue;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius:10px;
+    height: 12vh;
+    width: 100%;
+    margin-top: 40px;
+}
+.log-bar ul{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 0;
+    height: 12vh;
+    flex-wrap: wrap;
+}
+.auto-slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
