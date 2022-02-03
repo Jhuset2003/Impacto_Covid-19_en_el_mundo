@@ -44,10 +44,23 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.virus {
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+
 .navbar>i {
     font-size: 25px;
     color: var(--azul);
 }
+
 .navbar>i:hover {
     font-size: 25px;
     color: white;
@@ -75,7 +88,55 @@ body {
     background-color: var(--background);
     display: none;
 }
+#totalCase {
+    width: 95%;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 2px;
+    background: #fcf1f1;
+    margin-bottom: 15px;
+}
 
+#totalCase>h6 {
+    color: var(--azul);
+}
+
+#totalCase > p {  
+    font-size: 20px;
+    color: red !important;
+}
+#totalCase:hover{
+    border: 2px solid red;
+
+}
+#activeCase {
+    width: 95%;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 2px;
+    background: #fff3e9;
+    margin-bottom: 15px;
+}
+
+#activeCase>h6 {
+    color: var(--azul);
+}
+
+#activeCase > p {  
+    font-size: 20px;
+    color: #f87e2d;
+}
+#activeCase:hover{
+    border: 2px solid #f87e2d;
+}
 #recoveredCase {
     width: 95%;
     height: 40px;
@@ -85,7 +146,7 @@ body {
     ;
     justify-content: space-between;
     padding: 0 10px;
-    border-radius: 10px;
+    border-radius: 2px;
     background: var(--background-blue);
     margin-bottom: 15px;
 }
@@ -98,6 +159,9 @@ body {
     color: var(--verde);
     font-size: 20px;
 }
+#recoveredCase:hover {
+    border: 2px solid var(--verde);
+}
 
 #deathsCase {
     width: 95%;
@@ -108,7 +172,7 @@ body {
     ;
     justify-content: space-between;
     padding: 0 0.6rem;
-    border-radius: 0.6rem;
+    border-radius: 2px;
     background: var(--background-blue);
     margin-bottom: 0.9rem;
 }
@@ -120,6 +184,9 @@ body {
 #deathsCase>p {
     color: var(--azul);
     font-size: 1.25rem;
+}
+#deathsCase:hover {
+    border: 2px solid var(--azul);
 }
 
 #top-10 {
@@ -159,28 +226,52 @@ body {
     background-color: #f5f5f5;
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 30px;
+    grid-gap: 1.8rem;
     padding-top: 30px;
+}
+.main > div .image {
+    grid-area: image;    
+    width: 110px;
+    margin-top: -30px;
+    margin-left: -28px;    
+    opacity: 0.1;
+}
+.main > div .image:hover {
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 5s linear infinite;
+}
+.main > div .subtitle {
+    grid-area: subtitle;  
+    padding-top: 10px;
+}
+.main > div .parraf {
+    grid-area: parraf;
 }
 
 .main>div {
-    width: 250px;
+    width: 220px;
     height: 100px;
     border-radius: 5px;
     background: var(--background);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px 10px;
-    align-items: start;
+    padding: 15px 10px;   
     box-shadow: 2px 2px 2px 2px rgb(241, 241, 248);
+    overflow: hidden;
+    text-align: start;
+    display: grid;
+    grid-template:
+    "subtitle image"50%
+    "parraf image"auto/
+    150px auto;
 }
-
+.main>div:hover {
+    margin-top: -10px;
+}
 .main>div>p {
     font-size: 23px;
 }
 
-#totalCase>p {
+#totalCase-2>p {
     color: var(--azul);
 }
 
@@ -217,22 +308,46 @@ body {
     text-align: start;
     background: var(--background-blue);
 }
+.sidebar > div .image {
+    grid-area: image;    
+    width: 35px;
+}
+.sidebar > div .subtitle {
+    grid-area: subtitle;
+  
+}
+.sidebar > div .parraf {
+    grid-area: parraf;
+  
+}
 
 .sidebar>div {
     width: 40%;
     height: 50%;
     border-radius: 5px;
-    padding: 10px;
     background: var(--background);
     color: var(--azul);
     box-shadow: 2px 2px 2px 2px rgb(241, 241, 248);
+    align-items: center;
+    display: grid;
+    grid-template:
+    "image subtitle" 50%
+    "image parraf" auto/
+    24% auto;
 
 }
 
 .grid-container {
     display: grid;
     grid-template:
-        "navbar  header"50px "navbar  fecha"50px "navbar  main"300px "navbar main"auto "navbar mapa"200px "navbar sidebar"100px "navbar  sidebar"100px/ 80px auto;
+        "navbar  header"50px 
+        "navbar  fecha"50px 
+        "navbar  main"300px 
+        "navbar main"auto 
+        "navbar mapa"200px 
+        "navbar sidebar"100px 
+        "navbar  sidebar"100px/ 
+        80px auto;
 }
 
 
@@ -244,6 +359,10 @@ body {
 
     .grid-container {
         grid-template:
-            "navbar country  header fecha"3rem "navbar country main mapa"3rem "navbar country main mapa"400px "navbar country sidebar sidebar"auto/ 80px 300px 550px auto;
+            "navbar country  header fecha"3rem 
+            "navbar country main mapa"3rem 
+            "navbar country main mapa"400px 
+            "navbar country sidebar sidebar"auto/ 
+            80px 300px 500px auto;
     }
 }
