@@ -1,0 +1,148 @@
+console.log("conectado")
+
+const form = document.getElementById("myForm")
+
+const confirmados = document.getElementById("#confirmed")
+
+const seleccionPais = document.querySelector("#Paises")
+
+
+form.addEventListener('submit', function(e){
+ 
+    e.preventDefault()
+
+  var country = document.getElementById("country").value
+
+  var url = "https://disease.sh/v3/covid-19/countries/" + country
+
+     //cases
+
+
+   covidData(url)
+   
+
+//confirmados.innerHTML = cases
+
+});
+
+
+
+//var url = "https://disease.sh/v3/covid-19/countries/" 
+
+async function covidData(url){
+    let response = await fetch(url)
+    let dataCovid= await response.json()
+
+    //let claves = Object.values(dataCovid);
+      console.log("revisar que es >>> ", dataCovid) ;
+    
+    //console.log(dataCovid)
+
+    let DivDeaths = document.querySelector("#deaths"); 
+    
+        DivDeaths.innerHTML =  "deaths :" + "&nbsp&nbsp&nbsp&nbsp" + dataCovid.deaths;
+
+    let divRecovered = document.querySelector("#recovered"); 
+
+        divRecovered.innerHTML =  "recovered :" + "&nbsp&nbsp&nbsp&nbsp" + dataCovid.recovered;
+
+    let divCases = document.querySelector("#cases");
+    
+        divCases.innerHTML =  "cases :" + "&nbsp&nbsp&nbsp&nbsp" + dataCovid.cases; // + dataCovid.country + dataCovid.countryInfo.flag;
+    
+
+   // let selectPaises = document.querySelector("#Paises");
+    //selectPaises.innerHTML =  ´<option value="${data.cas}"> ${data.cas}</Option> `;
+   
+   // let paisesImg= document.querySelector(".banderaPais");
+
+    //paisesImg.innerHTML = "bandera" + data.countryInfo.flag +  data.country;
+    
+    //paisesImg.createElement += <img src="data.countryInfo.flag" alt="data.country>
+   // elem.setAttribute("src", "http://img.zohostatic.com/discussions/v1/images/defaultPhoto.png");
+   
+    //paisesImg.createElement += ("img");
+    //paisesImg.setAttribute("src", "data.countryInfo.flag");
+
+    //let bandera = document.querySelector(".bandera");
+
+     //console.log(dataCovid.countryInfo.flag)
+    /*
+     let userFullnames = users.map(function(element){
+        return `${element.firstName} ${element.lastName}`;
+    })
+    */
+    
+    //console.log(userFullnames);
+   
+/*
+    dataCovid.map(function(element){
+        console.log(`Map = ${element.flag} ${element.country}`)
+    })
+*/
+    function verBandera (e) {
+       
+         let flag = dataCovid.countryInfo.flag;
+
+        // let bandera = document.querySelector(".banderaPais");
+
+       //bandera.innerHTML += ` <img src="${imagen}" height="50px" width="50px"> ` 
+           /* `hello world ${x} times` */
+
+           const image = new Image;  //document.createElement('img') //new Image(50, 50)
+                 image.src  = flag
+                 image.id = "img-bandera"
+                 image.height = "20"
+                 image.width  = "20"
+          
+           document.querySelector('.bandera').appendChild(image)
+           //down.innerHTML = "Image Element Added."; 
+           //document.querySelector('.bandera').appendChild(image).innerHTML = "<br>"
+           
+        }
+       
+  
+        verBandera()
+    }
+
+     
+    
+    /*
+
+     console.log("llegada datos: ", dataCovid)
+    
+     covidData(url + country)
+
+  
+  
+     for (let index = 0; index < url.country.length; index++) {
+              
+        console.log("for" + dataCovid)
+
+        
+        var option = document.createElement("option")
+        option.text = "Kiwi";
+
+        console.log(element)
+
+        let listaDesplegable = document.getElementById('#Paises')
+
+        listaDesplegable.innerHTML += `<option value=${element} > ${element}  </option>`
+        
+   }
+
+   */
+
+    /*
+    dataCovid.forEach(country => {
+        console.log(country)
+        listaDesplegable.innerHTML += `<option value="${country}" > ${country}  </option>`
+ 
+    })
+    */
+
+/*
+   //tilde inverdita noborrar = `date`
+}
+
+*/

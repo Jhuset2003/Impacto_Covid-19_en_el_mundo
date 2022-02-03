@@ -16,13 +16,16 @@
         <!-- SELEC PAÍS -->
         <!-- ===================================== -->
         <header class="header">
-                <select name="select" id="select">
+                <select name="select" id="listaPais">
 
                 </select>
                 <div id="ejemplo">
 
                 </div>
+                
         </header>
+        <div id="bandera" >
+        </div>
 
         <!-- ======================================= -->
         <!-- NAVBAR -->
@@ -40,28 +43,29 @@
         </nav>
 
         <!-- ===================================== -->
-        <!-- TOP 10 -->
+        <!--                                                                   TOP 10 -->
         <!-- ===================================== -->
         <section class="country">
                 <h4>Covid-19 Tracker</h4>
                 <div id="totalCase">
                         <h6>Total Case</h6>
-                        <p id="TotalCaseData">0245</p>
+                        <p id="TotalCaseData"></p>
                 </div>
                 <div id="activeCase">
                         <h6>Active Case</h6>
-                        <p id="activeCaseData">0245</p>
+                        <p id="activeCaseData"></p>
                 </div>
                 <div id="recoveredCase">
                         <h6>Recovered Case</h6>
-                        <p id="recoveredCaseData">0245</p>
+                        <p id="recoveredCaseData"></p>
                 </div>
                 <div id="deathsCase">
                         <h6>Deaths Case</h6>
-                        <p id="deathsCaseData">125</p>
+                        <p id="deathsCaseData"></p>
                 </div>
                 <div id="top-10">
-                        <h6>Top 10 Country</h6>
+                        <h6>Top 10 Countr  </h6>
+                       
                 </div>
         </section>
 
@@ -69,26 +73,26 @@
 
 
         <!-- ===================================== -->
-        <!-- DATOS POR PAIS -->
+        <!-- DATOS POR PAIS                                       central-->                                          
         <!-- ===================================== -->
         <article class="main">
                 <div id="totalCase-2">
                         <img class="image" src="./images/icons/covid-defult.svg" width="40px"  alt="">
                         <h6 class="subtitle">Total Cases</h6>
-                        <p class="parraf" id="totalCaseData-2">52365489</p>
+                        <p class="parraf" id="totalCaseData-2"></p>
                         
                 </div>
                 <div id="totalDeaths">
                         <img class="image" src="./images/icons/covid-red.svg" width="40px"  alt="">
                         <h6 class="subtitle">Total Deaths</h6>
 
-                        <p class="parraf" id="totalDeathsData">data</p>
+                        <p class="parraf" id="totalDeathsData"></p>
                 </div>
                 <div id="totalRecovered">
                         <img class="image" src="./images/icons/covid-blue.svg" width="40px"  alt="">
                         <h6 class="subtitle">Total Recovered</h6>
 
-                        <p class="parraf" id="totalRecoveredData">data</p>
+                        <p class="parraf" id="totalRecoveredData"></p>
                 </div>
                 <div id="totalActive">
                         <img class="image" src="./images/icons/covid-green.svg" width="40px"  alt="">
@@ -109,6 +113,7 @@
                         <p class="parraf" id="NewDeatsData">data</p>
                 </div>
         </article>
+        
 
         <!-- ===================================== -->
         <!-- SECCIÓN DATOS TOTALES -->
@@ -146,7 +151,8 @@
         <section class="mapa">mapa</section>
 
 
-        <script src="./js/tracker-1.js"></script>
+        <script src="./listaPaisesConsulta.js"></script>
+
 </body>
 
 </html>
