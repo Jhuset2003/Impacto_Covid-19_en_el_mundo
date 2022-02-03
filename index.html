@@ -12,12 +12,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <title>COVIMAP</title>
 </head>
-
 <body>
     <!--============================================= -->
     <!-- BARRA DE NAVEGACION -->
     <!-- ============================================ -->
-    <header>
+    <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid p-1">
 
@@ -70,7 +69,7 @@
                         <li class="nav-item">
                             <a class="nav-link">Help</a>
                         </li>
-                        <li >
+                        <li class="btn-navbar">
                             <button type="button" class="btn"><a href="#">Tracker</a></button>
                         </li>
                     </ul>
@@ -95,7 +94,7 @@
                 <img src="./images/phones.png" alt="">
             </div>
             <section class="log-bar">
-                <div>
+                <div class="log-bar-container">
                     <ul>
                        <li class="logs"><img src="./images/b-2.png" alt=""></li>
                        <li class="logs"><img src="./images/b-3.png" alt=""></li>
@@ -113,19 +112,22 @@
                 <h1>Basic Feature You Will Get When You Use</h1>
             </div>
             <div class="slider">
-
+                
 
 
             </div>
         </section>
         <section class="stay-home">
-            <div class="img-saty-home">
-                <img src="./images/mobiles.png" alt="">
-            </div>
-            <div class="letters-stay-home">
-                <h1></h1>
-                <p></p>
-                <button type="button" class="btn-stay-home">DOWNLOAD NOW</button>
+            <div class="container-letters">
+                <div class="img-stay-home">
+                    <img src="./images/mobiles.png" alt="">
+                </div>
+                <div class="letters-stay-home">
+                    <h1>Stay Home, And Prayer For Victim </h1>
+                    <p>Human coronaviruses are common and are typically associated with mild illnesses, similar to the common cold.
+                        <br>Shortness of breath can be a third -- and very serious -- manifestation of Covid-19, and it can occur on its own, without a cough. </p>
+                    <button type="button" class="btn-stay-home">DOWNLOAD NOW</button>
+                </div>
             </div>
             <div class="info-stay-home">
 
@@ -154,7 +156,7 @@
         <section class="faqs">
             <div class="letters-faqs">
                 <span>Faqs</span>
-                <h1>Frequetly Asked Questions</h1>
+                <h1>Frequetly Asked<br>Questions</h1>
             </div>
             <div class="accor-faqs">
                 <div class="accordion" id="accordionExample">
@@ -211,13 +213,15 @@
             </div>
         </section>
         <section class="simple-app">
-            <div class="letters-simple-app">
-                <h1>Get the simple app for latest news</h1>
-                <p>Human coronaviruses are common and are typically associated with mild illness, similar to the common cold.</p>
-                <button type="button" class="btn-simple-app">DONLOAD NOW</button>
-            </div>
-            <div class="img-simple-app">
-                <img src="./images/phone-1.png" alt="">
+            <div class="container-simple-app">
+                <div class="letters-simple-app">
+                    <h1>Get the simple app<br> for latest news</h1>
+                    <p>Human coronaviruses are common and are typically associated <br> with mild illness, similar to the common cold.</p>
+                    <button type="button" class="btn-simple-app">DOWNLOAD NOW</button>
+                </div>
+                <div class="img-simple-app">
+                    <img src="./images/phone-1.png" alt="">
+                </div>
             </div>
         </section>
         <section class="news">
@@ -230,7 +234,7 @@
                         <span><i class="bi bi-stopwatch"></i> 9 Sept 2020</span>
                         <span><i class="bi bi-chat-left"></i> 21 Comment</span>
                     </header>
-                    <h1>Can COVID-19 be caught from a person who has no symptoms?</h1>
+                    <h1>Can COVID-19 be caught from a person who has no <br> symptoms?</h1>
                 </div>
                 <a href="#">Continue</a>
             </div>
@@ -243,7 +247,7 @@
                         <span><i class="bi bi-stopwatch"></i> 9 Sept 2020</span>
                         <span><i class="bi bi-chat-left"></i> 21 Comment</span>
                     </header>
-                    <h1>What you need to know About Novel Corona Virus Covid 19</h1>
+                    <h1>What you need to know About Novel Corona Virus<br> Covid 19</h1>
                 </div>
                 <a href="#">Continue</a>
             </div>
@@ -256,57 +260,61 @@
                         <span><i class="bi bi-stopwatch"></i> 9 Sept 2020</span>
                         <span><i class="bi bi-chat-left"></i> 21 Comment</span>
                     </header>
-                    <h1>What can 1 do to protect myself and prevent the spread of disease?</h1>
+                    <h1>What can 1 do to protect myself and prevent the<br> spread of disease?</h1>
                 </div>
                 <a href="#">Continue</a>
             </div>
         </section>
         <section class="footer">
-            <div>
-                <h2><img src="./images/favicon.png" alt="">COVIMAP</h2>
-                <P>These droplets can land on objects and surface around the person such as tables, doorknobs and handrails.</P>
-                <section class="icons">
-                    <i><i class="bi bi-facebook"></i></i>
-                    <i><i class="bi bi-twitter"></i></i>
-                    <i><i class="bi bi-linkedin"></i></i>
-                    <i><i class="bi bi-youtube"></i></i>
-                </section>
-            </div>
-            <div>
-                <ul>
-                    <li class="title"><strong>Quick Links</strong></li>
-                    <li>Prevention</li>
-                    <li>Qurantine</li>
-                    <li>About</li>
-                    <li>Help</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li class="title"><strong>About</strong></li>
-                    <li>Hand Wash</li>
-                    <li>Social Distance</li>
-                    <li>Isolate</li>
-                    <li>Diffence</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li class="title"><strong>About</strong></li>
-                    <li>Hand Wash</li>
-                    <li>Social Distance</li>
-                    <li>Isolate</li>
-                    <li>Diffence</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li class="title"><strong>Help</strong></li>
-                    <li>Hand Wash</li>
-                    <li>Social Distance</li>
-                    <li>Isolate</li>
-                    <li>Diffence</li>
-                </ul>
+            <div class="margin">
+                <div class="footer-title">
+                    <h2><img src="./images/favicon.png" alt="">COVIMAP</h2>
+                    <P>These droplets can land on objects and<br> surface around the person such as tables,<br> doorknobs and handrails.</P>
+                    <section class="icons-title">
+                        <i><i class="bi bi-facebook"></i></i>
+                        <i><i class="bi bi-twitter"></i></i>
+                        <i><i class="bi bi-linkedin"></i></i>
+                        <i><i class="bi bi-youtube"></i></i>
+                    </section>
+                </div>
+                <div class="footer-body">
+                    <div>
+                        <ul>
+                            <li class="title"><strong>Quick Links</strong></li>
+                            <li>Prevention</li>
+                            <li>Qurantine</li>
+                            <li>About</li>
+                            <li>Help</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="title"><strong>About</strong></li>
+                            <li>Hand Wash</li>
+                            <li>Social Distance</li>
+                            <li>Isolate</li>
+                            <li>Diffence</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="title"><strong>About</strong></li>
+                            <li>Hand Wash</li>
+                            <li>Social Distance</li>
+                            <li>Isolate</li>
+                            <li>Diffence</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li class="title"><strong>Help</strong></li>
+                            <li>Hand Wash</li>
+                            <li>Social Distance</li>
+                            <li>Isolate</li>
+                            <li>Diffence</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -324,8 +332,4 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 </body>
-
-</html>
-</body>
-
 </html>
