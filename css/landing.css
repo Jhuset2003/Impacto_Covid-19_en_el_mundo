@@ -39,12 +39,8 @@ main{
 
 .me-auto{
     margin: 0 !important;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 50px;
-    
+    padding: 0 !important;
+    gap:20px;
 }
 .navbar-light .navbar-nav .nav-link{
     color:#1d109e;
@@ -54,7 +50,6 @@ main{
     width: 150px;
     border-radius: 20px;
     height:45px;
-    margin-right: 60px;
 }
 .btn a{
     color: white;
@@ -307,7 +302,7 @@ footer div{
         margin-left: 60px;
     }
     main .main-header{
-        height: 120vh;
+        height: 140vh;
     }
     main .main-header .letters-main-header {
         margin: 0;
@@ -341,6 +336,7 @@ footer div{
     }
     .log-bar{
         margin-top:70px;
+        width: 100%;
     }
     .log-bar-container{   
         display: flex;
@@ -360,12 +356,17 @@ footer div{
        margin-left:15px;
        margin-right: 15px;
        height: 100%;
+       width: 100%;
+    }
+    .log-bar ul li{
+        display: flex;
+        justify-content: space-between;
     }
     .log-bar img {
         width: 75px;
     }
     .auto-slider{
-        margin-top: 310px;
+        margin-top: 110px;
         margin-left:20px;
         margin-right: 20px;
     }
@@ -585,4 +586,145 @@ footer div{
         padding: 0!important;
     }
     
+}
+@media (min-width: 850px){
+    .container-lettersandimg {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .main-header{
+        padding: 0;  
+        height: auto !important; 
+    }
+    .stay-home .container-letters{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .img-stay-home img{
+        width: 400px;   
+    }
+    .stay-home .letters-stay-home{
+        width: 80%;
+    }
+    .info-stay-home{
+        display: flex;
+        flex-direction: row;
+        gap: 155px;
+    }
+    .container-simple-app{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .img-simple-app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .img-simple-app img {
+        width: 250px;
+    }
+    .new{
+        display: flex;
+        flex-direction: row;
+    }
+    .news .new{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+    .letters-new{
+        margin-left:30px;
+        margin-right: 30px;
+    }
+    .img-new{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .news .new img{
+        width: 150px;
+        margin-bottom: 20px;
+    }
+}
+@media (min-width: 1000px) {
+    .navbar-expand-lg .navbar-collapse{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .me-auto .btn-navbar{
+        margin-left: 0!important ;
+    }
+    .footer .margin{
+        display: flex;
+        flex-direction:row;
+        width: 100%;
+    }
+    .footer-body{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .navbar-expand-lg .navbar-collapse{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .me-auto .btn-navbar{
+        margin-left: 0!important ;
+    }
+   
+}
+@media (min-width: 1400px) {
+   main .main-header h1{
+    font-size: 70px !important;
+   }
+   main .main-header p{
+       font-size: 20px;
+       line-height: 40px;
+   }
+   main .main-header .letters-main-header{
+       align-items: flex-start !important;
+   }
+   .img-main-header img{
+       width: 500px;
+   }
+   
+  .letters-auto-slider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+   .letters-auto-slider h1{
+       font-size: 60px;
+       width: 56%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .img-stay-home img {
+       width: 580px;
+   }
+   .letters-stay-home h1 {
+       font-size: 50px !important;
+   }
+   .letters-stay-home p {
+    font-size: 16px !important;
+    }
+    .letters-simple-app h1{
+        font-size: 50px !important;
+    }
+    .letters-simple-app p{
+        font-size: 20px !important;
+    }
+    .img-simple-app img {
+        width: 300px;
+    }
 }
