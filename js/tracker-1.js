@@ -50,7 +50,6 @@ function jsonCargado(json) {
                 let muertesHoy = document.querySelector("#NewDeatsData")
                 let casosHoy = document.querySelector("#NewCasessData")
                 // DOM
-                //
                 totalCases.innerHTML = `${element.cases}  `
                 totalDeaths.innerHTML = `${element.deaths} `
                 totalRecovered.innerHTML = `${element.recovered} `
@@ -73,6 +72,8 @@ const cargarDatosTotales = async () => {
 
 
         const datos = await respuesta.json();
+        console.log("Datos:", datos)
+
         let totalConfirmedData = document.getElementById('totalConfirmedData');
         totalConfirmedData.innerHTML = `${datos.cases} `
 
@@ -84,13 +85,43 @@ const cargarDatosTotales = async () => {
 
         let NewDeathsData = document.getElementById('NewDeathsData-2');
         NewDeathsData.innerHTML = `${datos.todayDeaths} `
-
         console.log(datos) /* devuelve un objeto con todos los datos*/
     } catch (error) {
         console.log(error);
     }
 }
 cargarDatosTotales()
+
+/* ============================
+=========CARGAR DATOS TOTALES TOP-10=======
+================================ */
+
+const cargarDatosTotalesTop = async () => {
+    try {
+        const respuestaTop = await fetch('https://disease.sh/v3/covid-19/all');
+        const datosTop = await respuestaTop.json();
+        console.log("Datos:", datosTop)
+        
+        let totalCaseData = document.getElementById('totalCaseData');
+        totalCaseData.innerHTML = `${datosTop.cases} `
+
+        let activeCaseData = document.getElementById('activeCaseData');
+        activeCaseData.innerHTML = `${datosTop.active} `
+
+        let recoveredCaseData = document.getElementById('recoveredCaseData');
+        recoveredCaseData.innerHTML = `${datosTop.recovered} `
+
+        let deathsCaseData = document.getElementById('deathsCaseData');
+        deathsCaseData.innerHTML = `${datosTop.todayDeaths} `
+
+        console.log(datosTop) /* devuelve un objeto con todos los datos*/
+    } catch (error) {
+        console.log(error);
+    }
+}
+cargarDatosTotalesTop()
+
+
 /* ============================
 =========Top 10 Banderas=======
 ================================ */
@@ -98,16 +129,15 @@ cargarDatosTotales()
 let banderas = document.querySelector('.flag');
 fetch('https://disease.sh/v3/covid-19/countries?sort=cases')
     .then(response => response.json())
-    .then(data => {        
+    .then(data => {
         console.log(data) /* Trae el arreglo de datos */
-
         const maximo = 10;
         let datas = data.slice(0, maximo)
         datas.map(datosBandera => {
             banderas.innerHTML += `<div class = "container_flag">
-                                  <div class= "second_div">
-                                <img src="${datosBandera.countryInfo.flag}">
-                                <p class="pais">${datosBandera.country}</p>
+                                    <div class= "second_div">
+                                    <img src="${datosBandera.countryInfo.flag}">
+                                     <p class="pais">${datosBandera.country}</p>
                                 </div>
                                 <p class="casos">${datosBandera.cases}</p>
                                 </div>`
@@ -129,30 +159,6 @@ let fechaTotal = document.querySelector("#fecha")
 
     fechaTotal.innerHTML = ` ${mes}  ${dia -1},  ${year} ` ;
 
-
 /*=======  Fin codigo fecha ======== */
 
 
-///////////////////////////////////////////////////////////////
-/* let banderas = document.querySelector('.flag');
-
-const cargarBanderas = async () => {
-
-    try {
-        const respuestaTop10 = await fetch('https://disease.sh/v3/covid-19/countries?sort=cases');
-
-        const datosTop10 = await respuestaTop10.json();
-
-        banderas.innerHTML += `<div class = "container_flag">
-                                <div class= "second_div">
-                                <img src="${datosTop10.countryInfo.flag}">
-                                <p class="pais">${datosTop10.country}</p>
-                                </div>
-                                <p class="casos">"${datosTop10.cases}"`
-        console.log(datosTop10)
-
-    } catch (error) {
-        console.log(error)
-    }
-}
-cargarBanderas() */
