@@ -95,6 +95,7 @@ body {
     grid-area: country;
     background-color: var(--background);
     display: none;
+    overflow: auto;
 }
 
 #totalCase {
@@ -183,7 +184,6 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    ;
     justify-content: space-between;
     padding: 0 0.6rem;
     border-radius: 2px;
@@ -213,6 +213,43 @@ body {
     color: var(--azul);
     font-size: 1rem;
     padding: 0 1rem;
+}
+
+/* Banderas */
+.flag{
+    display: flex;
+    flex-direction: column;
+    
+}
+.container_flag{
+    box-shadow: 1px 1px 1px 1px rgb(246, 246, 250);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+
+.second_div{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+
+}
+
+.second_div > img{
+    width: 40px;
+    margin: 5px;
+}
+
+.pais{
+    font-size: 12px;
+    margin: 5px;
+}
+
+.casos{
+    font-size: 15px;
+    margin: 12px;
 }
 
 /*==============================
@@ -371,7 +408,7 @@ body {
         "navbar main"auto 
         "navbar mapa"200px 
         "navbar sidebar"100px 
-        "navbar  sidebar"100px/ 
+        "navbar  sidebar"auto/ 
         12% 89%;
 }
 
@@ -429,8 +466,8 @@ body {
             "navbar  main"300px 
             "navbar mapa"200px 
             "navbar sidebar"50px 
-            "navbar  sidebar"150px/ 
-            12% 87%;
+            "navbar  sidebar"auto/ 
+            12% 100%;
     }
     .main>div {
         padding-top: 1px;
@@ -447,6 +484,10 @@ body {
 
     .grid-container {
         grid-template:
-            "navbar country  header fecha"3rem "navbar country main mapa"3rem "navbar country main mapa"320px "navbar country sidebar sidebar"auto/ 80px 300px 500px auto;
+            "navbar country  header fecha"3rem
+             "navbar country main mapa"3rem 
+             "navbar country main mapa"320px 
+             "navbar country sidebar sidebar"200px/ 
+             80px 270px 500px auto;
     }
 }
