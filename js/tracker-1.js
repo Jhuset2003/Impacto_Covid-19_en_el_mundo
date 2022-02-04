@@ -157,7 +157,7 @@ let fechaCreacion = new Date();
 
 let fechaTotal = document.querySelector("#fecha")
 
-    fechaTotal.innerHTML = ` ${mes}  ${dia -1},  ${year} ` ;
+    fechaTotal.innerHTML = ` ${mes}  ${dia -1}, ${year} ` ;
 
 /*=======  Fin codigo fecha ======== */
 
