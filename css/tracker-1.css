@@ -52,7 +52,9 @@ body {
 }
 
 @-webkit-keyframes spin {
-    100%{-webkit-transform: rotate(360deg);}
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 
@@ -69,13 +71,19 @@ body {
     border-radius: 10px;
 }
 
-
-
+/*==============================
+=========MAPA =============== */
 .mapa {
     grid-area: mapa;
-    background-color: #d6956a;
+    background-color: var(--background);
+    overflow: hidden;
+}
+.mapa>img{
+    width: 400px;
 }
 
+/*==============================
+=========FECHA =============== */
 .fecha {
     grid-area: fecha;
     background-color: #bfa6a6;
@@ -88,6 +96,7 @@ body {
     background-color: var(--background);
     display: none;
 }
+
 #totalCase {
     width: 95%;
     height: 40px;
@@ -105,14 +114,16 @@ body {
     color: var(--azul);
 }
 
-#totalCase > p {  
+#totalCase>p {
     font-size: 20px;
     color: red !important;
 }
-#totalCase:hover{
+
+#totalCase:hover {
     border: 2px solid red;
 
 }
+
 #activeCase {
     width: 95%;
     height: 40px;
@@ -130,13 +141,15 @@ body {
     color: var(--azul);
 }
 
-#activeCase > p {  
+#activeCase>p {
     font-size: 20px;
     color: #f87e2d;
 }
-#activeCase:hover{
+
+#activeCase:hover {
     border: 2px solid #f87e2d;
 }
+
 #recoveredCase {
     width: 95%;
     height: 40px;
@@ -159,6 +172,7 @@ body {
     color: var(--verde);
     font-size: 20px;
 }
+
 #recoveredCase:hover {
     border: 2px solid var(--verde);
 }
@@ -185,6 +199,7 @@ body {
     color: var(--azul);
     font-size: 1.25rem;
 }
+
 #deathsCase:hover {
     border: 2px solid var(--azul);
 }
@@ -226,47 +241,51 @@ body {
     background-color: #f5f5f5;
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 1.8rem;
+    grid-gap: 1rem;
     padding-top: 30px;
 }
-.main > div .image {
-    grid-area: image;    
+
+.main>div .image {
+    grid-area: image;
     width: 110px;
     margin-top: -30px;
-    margin-left: -28px;    
+    margin-left: -28px;
     opacity: 0.1;
 }
-.main > div .image:hover {
+
+.main>div .image:hover {
     -webkit-animation: spin 1s linear infinite;
     -moz-animation: spin 1s linear infinite;
     animation: spin 5s linear infinite;
 }
-.main > div .subtitle {
-    grid-area: subtitle;  
+
+.main>div .subtitle {
+    grid-area: subtitle;
     padding-top: 10px;
 }
-.main > div .parraf {
+
+.main>div .parraf {
     grid-area: parraf;
 }
 
 .main>div {
-    width: 220px;
-    height: 100px;
+    width: 45%;
+    height: 30%;
     border-radius: 5px;
     background: var(--background);
-    padding: 15px 10px;   
+    padding: 15px 10px;
     box-shadow: 2px 2px 2px 2px rgb(241, 241, 248);
     overflow: hidden;
     text-align: start;
     display: grid;
     grid-template:
-    "subtitle image"50%
-    "parraf image"auto/
-    150px auto;
+        "subtitle image"50% "parraf image"auto/ 150px auto;
 }
+
 .main>div:hover {
     margin-top: -10px;
 }
+
 .main>div>p {
     font-size: 23px;
 }
@@ -308,17 +327,26 @@ body {
     text-align: start;
     background: var(--background-blue);
 }
-.sidebar > div .image {
-    grid-area: image;    
+
+.sidebar>div .image {
+    grid-area: image;
     width: 35px;
 }
-.sidebar > div .subtitle {
-    grid-area: subtitle;
-  
+
+.sidebar>div .image:hover {
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 5s linear infinite;
 }
-.sidebar > div .parraf {
+
+.sidebar>div .subtitle {
+    grid-area: subtitle;
+
+}
+
+.sidebar>div .parraf {
     grid-area: parraf;
-  
+
 }
 
 .sidebar>div {
@@ -331,10 +359,7 @@ body {
     align-items: center;
     display: grid;
     grid-template:
-    "image subtitle" 50%
-    "image parraf" auto/
-    24% auto;
-
+        "image subtitle"50% "image parraf"auto/ 24% auto;
 }
 
 .grid-container {
@@ -347,10 +372,73 @@ body {
         "navbar mapa"200px 
         "navbar sidebar"100px 
         "navbar  sidebar"100px/ 
-        80px auto;
+        12% 89%;
 }
 
+@media(max-width: 375px) {
+    .main {       
+        justify-content: space-between;
+    }
 
+    .main>div>p {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    .main>div>h6 {
+        font-size: 10px;
+    }
+
+    .main>div .image {
+        grid-area: image;
+        width: 85px;
+        margin-left: -75px;
+        margin-top: -10px;
+    }
+    .mapa > img {
+        
+        width: 250px;
+        height: 220px;
+        overflow: hidden;
+    }
+    .sidebar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1px 3px;
+        }
+
+        .sidebar>div {
+            width: 120px;
+            height: 50px;                     
+        }
+
+        .sidebar>div >h6 {
+           font-size: 9px; 
+           padding: 0 5px;                    
+        }
+        .sidebar>div >p {
+            font-size: 15px;   
+            padding: 0 5px;                 
+         }
+    
+    .grid-container {
+        display: grid;
+        grid-template:
+            "navbar  header"50px 
+            "navbar  fecha"30px 
+            "navbar  main"300px 
+            "navbar mapa"200px 
+            "navbar sidebar"50px 
+            "navbar  sidebar"150px/ 
+            12% 87%;
+    }
+    .main>div {
+        padding-top: 1px;
+        width: 140px;
+        height: 60px;
+    }
+
+}
 
 @media (min-width: 900px) {
     .country {
@@ -359,10 +447,6 @@ body {
 
     .grid-container {
         grid-template:
-            "navbar country  header fecha"3rem 
-            "navbar country main mapa"3rem 
-            "navbar country main mapa"400px 
-            "navbar country sidebar sidebar"auto/ 
-            80px 300px 500px auto;
+            "navbar country  header fecha"3rem "navbar country main mapa"3rem "navbar country main mapa"320px "navbar country sidebar sidebar"auto/ 80px 300px 500px auto;
     }
 }
