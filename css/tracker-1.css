@@ -59,13 +59,26 @@ body {
 .navbar>i {
     font-size: 25px;
     color: var(--azul);
+    text-decoration: none;
 }
 .navbar>i:hover {
     font-size: 25px;
     color: white;
     background-color: var(--azul);
     padding: 10px 10px 2px 10px;
-    border-radius: 10px;
+    border-radius: 10px;   
+}
+.navbar>a {
+    font-size: 25px;
+    color: var(--azul);
+    text-decoration: none;
+}
+.navbar>a:hover {
+    font-size: 25px;
+    color: white;
+    background-color: var(--azul);
+    padding: 10px 10px 2px 10px;
+    border-radius: 10px;   
 }
 
 .active{
