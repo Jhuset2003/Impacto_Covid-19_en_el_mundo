@@ -1,12 +1,3 @@
-let fechaA = document.getElementById('fecha')
-Date.nombreMes = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Abril', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-
-function obtenerNombreCompletoMes(fecha) {
-    return Date.nombreMes[fecha.getMonth()];
-}
-console.log(obtenerNombreCompletoMes(new Date()));
-
-
 /* ======================== */
 
 console.log("listaPaises")
@@ -63,13 +54,11 @@ function jsonCargado(json) {
 }
 console.log(cargarJson());
 
-
 /* ===========DATOS TOTALES==================== */
 
 const cargarDatosTotales = async () => {
     try {
         const respuesta = await fetch('https://disease.sh/v3/covid-19/all');
-
 
         const datos = await respuesta.json();
         console.log("Datos:", datos)
@@ -120,8 +109,6 @@ const cargarDatosTotalesTop = async () => {
     }
 }
 cargarDatosTotalesTop()
-
-
 /* ============================
 =========Top 10 Banderas=======
 ================================ */
@@ -143,7 +130,6 @@ fetch('https://disease.sh/v3/covid-19/countries?sort=cases')
                                 </div>`
         });
     });
-
 
     /* ============================
 =========Fecha Update tracker======= codigo ralizado @dariohimo Feb 4 2022
