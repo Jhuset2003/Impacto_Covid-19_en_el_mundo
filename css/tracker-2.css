@@ -1,0 +1,18 @@
+.table{
+    width: 58rem;
+    height: 100vh;
+    background-color: aqua;
+    margin: 40px;  
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.left{
+    display: flex;
+   
+}
+
