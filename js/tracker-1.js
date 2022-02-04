@@ -33,6 +33,9 @@ function jsonCargado(json) {
         listaDesplegable.innerHTML += `<option value="${element.country}" > ${element.country}  </option>`
 
     });
+
+    //codigo realiza @dariohimo Feb 3 2022
+    //
     let consultaPais = document.querySelector('#listaPais'); //trae paises
     consultaPais.addEventListener('click', function (e) {
         let country = document.getElementById("listaPais").value;
@@ -112,8 +115,25 @@ fetch('https://disease.sh/v3/covid-19/countries?sort=cases')
     });
 
 
+    /* ============================
+=========Fecha Update tracker======= codigo ralizado @dariohimo Feb 4 2022
+================================ */
+let meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+let fechaCreacion = new Date();
+
+   mes = meses[fechaCreacion.getMonth()]
+   dia = fechaCreacion.getDay();
+   year = fechaCreacion.getFullYear();
+
+let fechaTotal = document.querySelector("#fecha")
+
+    fechaTotal.innerHTML = ` ${mes}  ${dia -1},  ${year} ` ;
 
 
+/*=======  Fin codigo fecha ======== */
+
+
+///////////////////////////////////////////////////////////////
 /* let banderas = document.querySelector('.flag');
 
 const cargarBanderas = async () => {
