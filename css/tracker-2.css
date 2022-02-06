@@ -1,7 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+:root {
+    --azulL: #040557;
+    --background: #ffff;
+    --background-blue: #f2f8f8;
+    --verde: #c0d467;
+    --popins: 'Poppins', sans-serif;
+}
 .table{
     width: 58rem;
     height: 100vh;
-    background-color: aqua;
     margin: 40px;  
 }
 
@@ -12,7 +21,27 @@
 }
 
 .left{
-    display: flex;
-   
+    display: flex;   
+}
+
+.tablaDatos{
+    overflow: auto;
+}
+
+th{
+    font-size: 1rem;
+    color: var(--azulL);
+    font-family: 'Poppins', sans-serif;
+}
+
+td{
+    font-size: 1rem;
+}
+
+.subtitle{
+    font-size: 1.5rem;
+    text-align: start;
+    color: var(--azulL);
+    margin-bottom: 10px;
 }
 

@@ -4,7 +4,7 @@ fetch(url) /* solicitud a la url */
     .then(response => response.json()) // resuelve la promesa y la pasa a formato json 
     .then(data => mostrarData(data)) // lee objeto data y lo imprime por consola
     .catch(error => console.log(error))
-
+    
 const mostrarData = (data) => {
     console.log(data)
     let body = ''
@@ -16,4 +16,8 @@ const mostrarData = (data) => {
         <td>${data[i].active}</td><td>${data[i].critical}</td><td>${data[i].tests}</td>`
     }
     document.getElementById('datos').innerHTML = body
+  
+    $(document).ready( function () {
+        $('#table').DataTable();
+    } );
 }

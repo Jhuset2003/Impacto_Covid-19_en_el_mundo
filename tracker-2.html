@@ -4,14 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- data table -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.4/datatables.min.css" />
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.4/datatables.min.js"></script>
+
+
+
     <!-- iconos -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <title>Tracker-2</title>
     <link rel="stylesheet" href="./css/tracker-1.css">
     <link rel="stylesheet" href="./css/tracker-2.css">
+
+
 </head>
 
 <body class="grid-container">
@@ -20,8 +27,8 @@
     <!-- ======================================= -->
     <nav class="navbar">
         <img class="virus" src="./images/nav-trakcer/coronavirus.png" width="40px" alt="">
-       <a href="./tracker-1.html"> <i class="fi fi-rr-chart-pie-alt"></i></a>
-        <i class="fi fi-rr-menu-burger"></i>
+        <a href="./tracker-1.html"> <i class="fi fi-rr-chart-pie-alt"></i></a>
+        <i class="fi fi-rr-menu-burger active"></i>
         <i class="fi fi-rr-apps"></i>
         <i class="fi fi-rr-folder"></i>
         <i class="fi fi-rr-layers"></i>
@@ -61,57 +68,33 @@
     <section class="table">
         <h2 class="subtitle">Ajax Data Table-Covid-19 Country Wise State </h2>
         <hr>
-        <div class="top">
-            <section class="left">
-                <label for="number">Show</label>
-                <select name="number" id="number">
-                    <option value="diez">10</option>
-                    <option value="veintiCinco">25</option>
-                    <option value="cincuenta">50</option>
-                    <option value="cien">100</option>
-                </select>
-                <h6>entries</h6>
-            </section>
-            <section class="right">
-                <label for="search">Search</label>
-                <input type="text">
-            </section>
-             </div>
+        <br>
+
+
         <div class="tablaDatos">
             <table id="table" border="1">
                 <thead>
-                <tr>
-                    <th id="flagD">Flag</th>
-                    <th id="country">Country</th>
-                    <th id="casesD">Cases</th>
-                    <th id="newCasesD">New Cases</th>
-                    <th id="deathsD">Deaths</th>
-                    <th id="newDeathsD">New Deaths</th>
-                    <th id="recoveredD">Recovered</th>
-                    <th id="activeD">Active</th>
-                    <th id="criticlaD">Critical</th>
-                    <th id="testedD">Tested</th>
-                </tr>
-            </thead>
-            <tbody id="datos">
+                    <tr>
+                        <th>Flag</th>
+                        <th>Country</th>
+                        <th>Cases</th>
+                        <th>New Cases</th>
+                        <th>Deaths</th>
+                        <th>New Deaths</th>
+                        <th>Recovered</th>
+                        <th>Active</th>
+                        <th>Critical</th>
+                        <th>Tested</th>
+                    </tr>
+                </thead>
+                <tbody id="datos">
 
-            </tbody>
+                </tbody>
             </table>
 
         </div>
-
-         
-
-
     </section>
-
-
-
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+    <script src="./js/tracker-1.js"></script>
     <script src="./js/tracker-2.js"></script>
 
 
