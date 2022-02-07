@@ -441,7 +441,7 @@ body {
     align-items: center;
     display: grid;
     grid-template:
-        "image subtitle"50% "image parraf"auto/ 24% auto;
+        "image subtitle"50%"image parraf"auto/ 24% auto;
 }
 
 .grid-container {
@@ -456,12 +456,18 @@ body {
         "navbar  sidebar"auto/ 
         12% 89%;
 }
-
+/* Cuando la pantalla sea mas pequeña de 375px */
 @media(max-width: 375px) {
+    body{
+        width:91%;
+    }
     .main {       
         justify-content: space-between;
     }
-
+    .main>div{       
+        width: 120px !important;
+    }
+   
     .main>div>p {
         font-size: 15px;
         padding-top: 10px;
@@ -486,6 +492,7 @@ body {
     .sidebar {
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 1rem;
         padding: 1px 3px;
         }
 
@@ -519,13 +526,32 @@ body {
         width: 140px;
         height: 60px;
     }
+}
+/* Cuando la pantalla es mas pequeña de 811 */
+@media(max-width: 811px) {
+
+    .navbar{
+        background-color: red;
+    }
+
+    .main>div{      
+        height: 5rem !important;
+        margin-top: 10px !important;
+    }
+
+    .mapa>img{
+        width: 250px;
+    }
+
 
 }
 
+
+/* Cuando la pantalla sea mas grande de 900px */
 @media (min-width: 900px) {
     .country {
         display: inline
-    }
+        }    
 
     .grid-container {
         grid-template:
