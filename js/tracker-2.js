@@ -10,7 +10,7 @@ const mostrarData = (data) => {
     let body = ''
     for (let i = 0; i < data.length; i++) {
         body += `<tr><td><img width="50px"src="${data[i].countryInfo.flag}">
-        </td><td>${data[i].country}</td><td>${data[i].cases}</td>
+        </td><td>${data[i].country}</td><td class=("activeBg")>${data[i].cases}</td>
         <td>${data[i].todayCases}</td><td>${data[i].deaths}</td>
         <td>${data[i].todayDeaths}</td><td>${data[i].recovered}</td>
         <td>${data[i].active}</td><td>${data[i].critical}</td><td>${data[i].tests}</td>`

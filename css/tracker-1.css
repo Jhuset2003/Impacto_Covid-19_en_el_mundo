@@ -120,6 +120,10 @@ body {
     overflow: auto;
 }
 
+.activeBg{
+    background: red;
+}
+
 #totalCase {
     width: 95%;
     height: 40px;

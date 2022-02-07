@@ -8,10 +8,17 @@
     --verde: #c0d467;
     --popins: 'Poppins', sans-serif;
 }
+/* .container{
+    overflow: hidden;
+} */
+
+
 .table{
     width: 58rem;
     height: 100vh;
-    margin: 40px;  
+    margin: 40px; 
+    overflow: auto; 
+  
 }
 
 .top{
