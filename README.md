@@ -132,7 +132,13 @@ console.log(cargarJson());
    Creación Feb 4 de 2022.
 ```
 
+#
+[Link de la LandinPage github_Pages:](https://github.com/AndresEstebanPatino/recursos-app-covid/blob/4368c5ccaf066455ad0796b668e2414d6d32e079/mockups/Tracker-2.png)
+#
 
+#
+[Link a scrum:](https://lauravargas.atlassian.net/jira/software/projects/COV/boards/7)
+#
 
 
 
