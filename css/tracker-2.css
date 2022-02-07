@@ -11,7 +11,8 @@
 .table{
     width: 58rem;
     height: 100vh;
-    margin: 40px;  
+    margin: 40px; 
+    overflow: auto; 
 }
 
 .top{
