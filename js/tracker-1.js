@@ -138,12 +138,12 @@ let meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio",
 let fechaCreacion = new Date();
 
    mes = meses[fechaCreacion.getMonth()]
-   dia = fechaCreacion.getDay();
+   dia = fechaCreacion.getUTCDate();   //getDay();
    year = fechaCreacion.getFullYear();
 
 let fechaTotal = document.querySelector("#fecha")
 
-    fechaTotal.innerHTML = ` ${mes}  ${dia -1}, ${year} ` ;
+    fechaTotal.innerHTML = ` ${mes}  ${dia}, ${year} ` ;
 
 /*=======  Fin codigo fecha ======== */
 
