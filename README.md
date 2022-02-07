@@ -133,7 +133,7 @@ console.log(cargarJson());
 ```
 
 #
-[Link de la LandinPage github_Pages:](https://github.com/AndresEstebanPatino/recursos-app-covid/blob/4368c5ccaf066455ad0796b668e2414d6d32e079/mockups/Tracker-2.png)
+[Link de la LandinPage github_Pages:](https://jhuset2003.github.io/Impacto_Covid-19_en_el_mundo/)
 #
 
 #
