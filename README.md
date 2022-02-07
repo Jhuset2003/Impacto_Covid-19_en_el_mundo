@@ -103,7 +103,7 @@ console.log(cargarJson());
 ![Responsive](https://raw.githubusercontent.com/AndresEstebanPatino/recursos-app-covid/main/mockups/Responsive.png)
 
 # Diseño LandinPage
-![Landinpage](https://raw.githubusercontent.com/AndresEstebanPatino/recursos-app-covid/main/mockups/home-1.png)
+![Landinpage](https://raw.githubusercontent.com/AndresEstebanPatino/recursos-app-covid/main/mockups/home-2.png)
 
 #
 
