@@ -14,6 +14,21 @@ function jsonCargado(json) {
     let claves = Object.values(json);
 
     // console.log("Pais. ", claves[0].country)
+                let totalCases = document.querySelector("#totalCaseData-2");
+                let totalDeaths = document.querySelector("#totalDeathsData");
+                let totalRecovered = document.querySelector("#totalRecoveredData");
+                let totalActivos = document.querySelector("#totalActiveData");
+                let totalCasos = document.querySelector("#NewCasessData");
+                let muertesHoy = document.querySelector("#NewDeatsData")
+                let casosHoy = document.querySelector("#NewCasessData")
+                // DOM
+                totalCases.innerHTML = `${claves[0].cases}  `
+                totalDeaths.innerHTML = `${claves[0].deaths} `
+                totalRecovered.innerHTML = `${claves[0].recovered} `
+                totalActivos.innerHTML = `${claves[0].active} `
+                totalCasos.innerHTML = `${claves[0].todayCases} `
+                muertesHoy.innerHTML = `${claves[0].todayDeaths} `
+                casosHoy.innerHTML = `${claves[0].todayCases} `
 
     claves.forEach(element => {
         //console.log(element)
