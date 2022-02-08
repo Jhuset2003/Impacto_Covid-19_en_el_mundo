@@ -15,17 +15,17 @@
 }
 
 html {
-    
+
     background: var(--background);
-  
-  
+
+
 }
 
 body {
     font-family: "Public Sans", sans-serif;
     font-size: 1.2rem;
     font-family: var(--popins);
-   
+
 }
 
 .grid-container>* {
@@ -57,32 +57,36 @@ body {
         -webkit-transform: rotate(360deg);
     }
 }
+
 .navbar>i {
     font-size: 1.5rem;
     color: var(--azul);
     text-decoration: none;
 }
+
 .navbar>i:hover {
     font-size: 1.5rem;
     color: white;
     background-color: var(--azul);
     padding: 10px 10px 2px 10px;
-    border-radius: 10px;   
+    border-radius: 10px;
 }
+
 .navbar>a {
     font-size: 1.5rem;
     color: var(--azul);
     text-decoration: none;
 }
+
 .navbar>a:hover {
     font-size: 25px;
     color: white;
     background-color: var(--azul);
     padding: 10px 10px 2px 10px;
-    border-radius: 10px;   
+    border-radius: 10px;
 }
 
-.active{
+.active {
     font-size: 25px;
     color: white !important;
     background-color: var(--azul);
@@ -97,7 +101,8 @@ body {
     background-color: var(--background);
     overflow: hidden;
 }
-.mapa>img{
+
+.mapa>img {
     width: 25rem;
 }
 
@@ -108,7 +113,8 @@ body {
     display: flex;
     justify-content: space-around;
 }
-#fecha{
+
+#fecha {
     font-size: 15px;
 }
 
@@ -241,12 +247,13 @@ body {
 }
 
 /* Banderas */
-.flag{
+.flag {
     display: flex;
     flex-direction: column;
-    
+
 }
-.container_flag{
+
+.container_flag {
     box-shadow: 1px 1px 1px 1px rgb(246, 246, 250);
     display: flex;
     justify-content: space-between;
@@ -254,11 +261,12 @@ body {
     padding: 10px;
 }
 
-.container_flag:hover{
+.container_flag:hover {
     padding: 2px;
     box-shadow: 2px 2px 2px 2px rgb(185, 185, 189);
 }
-.flag>h6{
+
+.flag>h6 {
     font-size: 15px;
     text-align: start;
     padding: 15px;
@@ -267,24 +275,24 @@ body {
 
 
 
-.second_div{
+.second_div {
     display: flex;
     padding: 10px;
     justify-content: center;
 
 }
 
-.second_div > img{
+.second_div>img {
     width: 40px;
     margin: 5px;
 }
 
-.pais{
+.pais {
     font-size: 12px;
     margin: 5px;
 }
 
-.casos{
+.casos {
     font-size: 15px;
     margin: 12px;
 }
@@ -334,12 +342,19 @@ body {
 } */
 
 .one:hover img {
-    animation:one 4s infinite linear;
+    animation: one 4s infinite linear;
 }
 
-@keyframes one{
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg)};
+@keyframes one {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+
+    ;
 }
 
 .main>div .subtitle {
@@ -446,29 +461,23 @@ body {
 .grid-container {
     display: grid;
     grid-template:
-        "navbar  header"50px 
-        "navbar  fecha"50px 
-        "navbar  main"300px 
-        "navbar main"auto 
-        "navbar mapa"200px 
-        "navbar sidebar"100px 
-        "navbar  sidebar"auto/ 
-        12% 89%;
+        "navbar  header"50px "navbar  fecha"50px "navbar  main"300px "navbar main"auto "navbar mapa"200px "navbar sidebar"100px "navbar  sidebar"auto/ 12% 89%;
 }
+
 /* cuando la pantalla sea menor a 375px */
 @media(max-width: 375px) {
-    .header{
+    .header {
         width: 85%;
     }
 
-    .fecha{
+    .fecha {
         width: 85%;
     }
-  
-    .main {       
+
+    .main {
         justify-content: space-between;
-        width:87%;
-    }   
+        width: 87%;
+    }
 
     .main>div>p {
         font-size: 15px;
@@ -485,44 +494,42 @@ body {
         margin-left: -75px;
         margin-top: -10px;
     }
-    .mapa > img {
-        
+
+    .mapa>img {
+
         width: 250px;
         height: 220px;
         overflow: hidden;
     }
+
     .sidebar {
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 1px 3px;
         width: 85%;
-        }
+    }
 
-        .sidebar>div {
-            width: 120px;
-            height: 50px;                     
-        }
+    .sidebar>div {
+        width: 120px;
+        height: 50px;
+    }
 
-        .sidebar>div >h6 {
-           font-size: 9px; 
-           padding: 0 5px;                    
-        }
-        .sidebar>div >p {
-            font-size: 15px;   
-            padding: 0 5px;                 
-         }
-    
+    .sidebar>div>h6 {
+        font-size: 9px;
+        padding: 0 5px;
+    }
+
+    .sidebar>div>p {
+        font-size: 15px;
+        padding: 0 5px;
+    }
+
     .grid-container {
         display: grid;
         grid-template:
-            "navbar  header"50px 
-            "navbar  fecha"30px 
-            "navbar  main"300px 
-            "navbar mapa"200px 
-            "navbar sidebar"50px 
-            "navbar  sidebar"auto/ 
-            12% 100%;
+            "navbar  header"50px "navbar  fecha"30px "navbar  main"300px "navbar mapa"200px "navbar sidebar"50px "navbar  sidebar"auto/ 12% 100%;
     }
+
     .main>div {
         padding-top: 1px;
         width: 140px;
@@ -531,6 +538,8 @@ body {
 
 }
 
+/* Pantallas mas grandes de 900px */
+
 @media (min-width: 900px) {
     .country {
         display: inline
@@ -538,11 +547,6 @@ body {
 
     .grid-container {
         grid-template:
-            "navbar country  header fecha"3rem
-             "navbar country main mapa"3rem 
-             "navbar country main mapa"20rem 
-             "navbar country sidebar sidebar"250px/ 
-        
-             80px 270px 500px auto;
+            "navbar country  header fecha"3rem "navbar country main mapa"3rem "navbar country main mapa"30rem "navbar country sidebar sidebar"250px/ 80px 270px 500px auto;
     }
 }
